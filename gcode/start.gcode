@@ -1,6 +1,6 @@
 ;===== machine: A1 ========================
 ;======= liamwerk7676 =====================
-;===== date: 12122025 =====================
+;===== date: 18-3-2026 =====================
 G392 S0
 M9833.2
 ;M400
@@ -73,7 +73,7 @@ G91
 G1 Z5 F1200
 G90
 G0 X128 F30000
-G0 Y254 F3000
+G0 Y254 F9000
 G91
 G1 Z-5 F1200
 
@@ -187,7 +187,7 @@ M623 ; end of "draw extrinsic para cali paint"
 
 ;G392 S0
 ;===== auto extrude cali end ========================
-;===== Fix Chay Nhua Start ========================
+;===== Fix Chay Nhua Start ==========================
 M106 S150
 M109 S180 ; prepare to wipe nozzle
 M104 S140
@@ -197,13 +197,13 @@ G1 X-28.5 F18000
     G1 X-48.2 F3000
     G1 X-28.5 F12000 ;wipe and shake
     G1 X-48.2 F3000
-;===== Fix Chay Nhua End ========================
+;===== Fix Chay Nhua End ============================
 ;M400
 ;M73 P1.717
 ;===== mech mode fast check start =====================
 M1002 gcode_claim_action : 3
 
-G1 X128 Y128 F20000
+G1 X128 Y128 F42000
 G1 Z5 F1200
 M400 P200
 M970.3 Q1 A5 K0 O3
@@ -232,7 +232,7 @@ M211 S; push soft endstop status
 M211 X0 Y0 Z0 ;turn off Z axis endstop
 ;===== brush material wipe nozzle =====
 G90
-G1 X30 Y250.000 F20000
+G1 X30 Y250.000 F42000
 G1 Z1.300 F1200
 G1 Y262.5 F6000
 G91
@@ -285,7 +285,7 @@ M1002 judge_flag g29_before_print_flag
 
 G90
 G1 Z5 F1200
-G1 X0 Y0 F30000
+G1 X0 Y0 F42000
 G29.2 S1 ; turn on ABL
 
 M622 J1
